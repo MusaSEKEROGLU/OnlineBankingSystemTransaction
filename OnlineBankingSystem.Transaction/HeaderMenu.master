@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="HeaderMenu.master.cs" Inherits="OnlineBankingSystem.Transaction.HeaderMenu" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <style>
+        .nav-item {
+            padding: 6px 40px;
+            color: white;
+        }
+
+        .nav-item-balance {
+            padding-left: 40px;
+        }
+
+        .nav-item-balance-val {
+            margin-right: 180px;
+            color: white;
+        }
+
+        .nav-item-logout {
+            padding-right: 5px;
+        }
+    </style>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div align="center" style="background-color: gray; width: auto; height: 30px">
+
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-item" NavigateUrl="PerformTransaction.aspx">Para Transferi</asp:HyperLink>
+
+        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="nav-item" NavigateUrl="MyCredit.aspx">Kredim </asp:HyperLink>
+
+        <asp:HyperLink ID="HyperLink3" runat="server" CssClass="nav-item" NavigateUrl="MyDebit.aspx">Borcum </asp:HyperLink>
+
+        <asp:Label ID="Label1" runat="server" Text="Bakiye" CssClass="nav-item-balance" Font-Bold="true"></asp:Label>
+
+        <asp:Label ID="lblBalance" runat="server" CssClass="nav-item-balance-val" Font-Bold="true" BackColor="Navy" BorderWidth="1px"></asp:Label>
+
+        <asp:Button ID="btnLogout" runat="server" Text="Çıkış Yap" CssClass="nav-item-logout" ForeColor="White" CausesValidation="false" BackColor="Red" Height="28px" OnClick="btnLogout_Click"/>
+
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentPH" runat="server"></asp:ContentPlaceHolder>
+
+
+</asp:Content>
